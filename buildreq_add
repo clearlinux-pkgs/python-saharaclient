@@ -57,3 +57,4 @@ jsonschema-python
 httplib2
 oslo.log-python
 oslo.context-python
+python-openstackclient-python
