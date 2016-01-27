@@ -1,0 +1,28 @@
+From df5e447f0960afd0badee8f5a482073533682d32 Mon Sep 17 00:00:00 2001
+From: Jose Luis Rivera Magallon <jose.luis.rivera.magallon@intel.com>
+Date: Wed, 27 Jan 2016 10:57:54 -0600
+Subject: [PATCH] Modify encodeutils functions
+
+Signed-off-by: Jose Luis Rivera Magallon <jose.luis.rivera.magallon@intel.com>
+---
+ saharaclient/shell.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/saharaclient/shell.py b/saharaclient/shell.py
+index 49e885e..67bcd5b 100644
+--- a/saharaclient/shell.py
++++ b/saharaclient/shell.py
+@@ -711,8 +711,8 @@ class OpenStackHelpFormatter(argparse.HelpFormatter):
+ 
+ def main():
+     try:
+-        OpenStackSaharaShell().main(map(encodeutils.safe_decode,
+-                                        sys.argv[1:]))
++        argv = [encodeutils.safe_decode(a) for a in sys.argv[1:]]
++        OpenStackSaharaShell().main(argv)
+ 
+     except Exception as e:
+         logger.debug(e, exc_info=1)
+-- 
+2.1.0
+
