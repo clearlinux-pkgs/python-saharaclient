@@ -4,7 +4,7 @@
 #
 Name     : python-saharaclient
 Version  : 0.11.1
-Release  : 21
+Release  : 22
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.11.1.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.11.1.tar.gz
 Summary  : Client library for Sahara API
@@ -24,7 +24,6 @@ BuildRequires : docutils-python
 BuildRequires : extras
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
-BuildRequires : funcsigs-python
 BuildRequires : futures-python
 BuildRequires : hacking
 BuildRequires : httplib2
@@ -81,6 +80,7 @@ BuildRequires : tox
 BuildRequires : traceback2-python
 BuildRequires : unittest2-python
 BuildRequires : virtualenv
+Patch1: 0001-Modify-encodeutils-functions.patch
 
 %description
 Compiled against Hadoop 1.2.1
@@ -114,6 +114,7 @@ python components for the python-saharaclient package.
 
 %prep
 %setup -q -n python-saharaclient-0.11.1
+%patch1 -p1
 
 %build
 python2 setup.py build -b py2
@@ -123,7 +124,7 @@ python3 setup.py build -b py3
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-python2 setup.py test || :
+PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot}
