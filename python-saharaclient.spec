@@ -4,7 +4,7 @@
 #
 Name     : python-saharaclient
 Version  : 0.11.1
-Release  : 22
+Release  : 23
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.11.1.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.11.1.tar.gz
 Summary  : Client library for Sahara API
