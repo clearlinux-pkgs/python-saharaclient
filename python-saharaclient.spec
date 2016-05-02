@@ -4,7 +4,7 @@
 #
 Name     : python-saharaclient
 Version  : 0.14.0
-Release  : 27
+Release  : 28
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.14.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.14.0.tar.gz
 Summary  : Client library for Sahara API
@@ -12,36 +12,23 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: python-saharaclient-bin
 Requires: python-saharaclient-python
-BuildRequires : Jinja2
-BuildRequires : Pygments
-BuildRequires : Sphinx-python
 BuildRequires : cliff-python
 BuildRequires : cmd2-python
-BuildRequires : coverage-python
-BuildRequires : discover-python
-BuildRequires : docutils-python
-BuildRequires : flake8-python
-BuildRequires : hacking
+BuildRequires : extras
+BuildRequires : extras-python
 BuildRequires : jsonpatch-python
 BuildRequires : jsonpointer-python
 BuildRequires : jsonschema-python
 BuildRequires : keystoneauth1-python
-BuildRequires : mccabe-python
 BuildRequires : msgpack-python-python
 BuildRequires : openstacksdk-python
 BuildRequires : os-client-config-python
-BuildRequires : os-testr-python
 BuildRequires : oslo.log-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest-python
-BuildRequires : paramiko-python
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
 BuildRequires : pluggy
 BuildRequires : prettytable
 BuildRequires : py-python
-BuildRequires : pyflakes-python
 BuildRequires : pyinotify-python
 BuildRequires : pyparsing-python
 BuildRequires : pytest
@@ -49,20 +36,16 @@ BuildRequires : python-cinderclient-python
 BuildRequires : python-dev
 BuildRequires : python-glanceclient-python
 BuildRequires : python-keystoneclient-python
-BuildRequires : python-mock-python
-BuildRequires : python-neutronclient-python
 BuildRequires : python-novaclient-python
 BuildRequires : python-openstackclient-python
-BuildRequires : python-swiftclient-python
 BuildRequires : python3-dev
-BuildRequires : reno-python
-BuildRequires : requests-mock-python
 BuildRequires : requests-python
 BuildRequires : setuptools
 BuildRequires : six
 BuildRequires : six-python
-BuildRequires : tempest-lib-python
 BuildRequires : testrepository-python
+BuildRequires : testtools
+BuildRequires : testtools-python
 BuildRequires : tox
 BuildRequires : virtualenv
 
