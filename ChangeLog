@@ -1,15 +1,67 @@
 CHANGES
 =======
 
-0.14.0
+0.18.0
 ------
 
 * Updated from global requirements
-* Update .gitreview for stable/mitaka
+* Updated from global requirements
+
+0.17.0
+------
+
+* Add sorting ability to Python-saharaclient
+* Designate integration
+* Updated from global requirements
+
+0.16.0
+------
+
+* Updated from global requirements
+* Add pagination ability to Python-saharaclient
+* Remove discover from test-requirements
+* Updated from global requirements
+* include storm.pyleus in job types
+* Updated from global requirements
+* support event logs for CLI
+* plugin's api update support
+* Updated from global requirements
+* Remove unused functional tests
+* Updated from global requirements
+* Updated from global requirements
+* Add openstackclient dependency back
+* Use osc_lib instead of cliff
+* Updated from global requirements
+* Updated from global requirements
+* Use osc-lib instead of openstackclient
+* Updated from global requirements
+* Remove incorrectly used "# flake8: noqa"
+* print statment has become a function in py3
+* Updated from global requirements
+* avoid additional requirement for building docs
+* Migrate functional tests to openstack-client
+
+0.15.0
+------
+
+* Change plugin version 'version' parameter to 'plugin-version'
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Replace tempest_lib with tempest.lib
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Remove integration tests from saharaclient
+* Update reno for stable/mitaka
+* Updated from global requirements
 
 0.13.0
 ------
 
+* Remove unused pngmath Sphinx extension
 * Fixing updates via CLI
 * Fixing cluster creation with neutron network via CLI
 * Use ostestr instead of the custom pretty_tox.sh
@@ -426,7 +478,7 @@ CHANGES
 0.4.1
 -----
 
-* JobExecutionsManager.create(
+* JobExecutionsManager.create() should handle input_id/output_id == None
 * Clean up versions display in plugins-show
 * Clean up printing of image details
 * Allow passing extra args to JobExecutionsManager.create()
