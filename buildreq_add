@@ -30,3 +30,4 @@ six-python
 testrepository-python
 tox
 virtualenv
+osc-lib

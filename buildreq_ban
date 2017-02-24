@@ -3,3 +3,5 @@
 openstackclient.common-python
 openstackclient.tests-python
 v1_1-python
+requests_mock.contrib-python
+osc_lib.tests-python

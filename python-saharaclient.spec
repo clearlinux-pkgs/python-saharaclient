@@ -6,7 +6,7 @@
 #
 Name     : python-saharaclient
 Version  : 0.18.0
-Release  : 34
+Release  : 35
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.18.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.18.0.tar.gz.asc
@@ -15,10 +15,22 @@ Group    : Development/Tools
 License  : Apache-2.0
 Requires: python-saharaclient-bin
 Requires: python-saharaclient-python
+Requires: Babel
+Requires: keystoneauth1
+Requires: osc-lib
+Requires: oslo.i18n
+Requires: oslo.log
+Requires: oslo.serialization
+Requires: oslo.utils
+Requires: pbr
+Requires: python-keystoneclient
+Requires: python-openstackclient
+Requires: requests
+Requires: six
+BuildRequires : PyYAML
+BuildRequires : appdirs-python
 BuildRequires : cliff-python
 BuildRequires : cmd2-python
-BuildRequires : extras
-BuildRequires : extras-python
 BuildRequires : jsonpatch-python
 BuildRequires : jsonpointer-python
 BuildRequires : jsonschema-python
@@ -26,6 +38,7 @@ BuildRequires : keystoneauth1-python
 BuildRequires : msgpack-python-python
 BuildRequires : openstacksdk-python
 BuildRequires : os-client-config-python
+BuildRequires : osc-lib
 BuildRequires : oslo.log-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -39,16 +52,16 @@ BuildRequires : python-cinderclient-python
 BuildRequires : python-dev
 BuildRequires : python-glanceclient-python
 BuildRequires : python-keystoneclient-python
+BuildRequires : python-mock-python
 BuildRequires : python-novaclient-python
 BuildRequires : python-openstackclient-python
 BuildRequires : python3-dev
 BuildRequires : requests-python
+BuildRequires : requestsexceptions-python
 BuildRequires : setuptools
 BuildRequires : six
 BuildRequires : six-python
 BuildRequires : testrepository-python
-BuildRequires : testtools
-BuildRequires : testtools-python
 BuildRequires : tox
 BuildRequires : virtualenv
 
@@ -67,13 +80,6 @@ bin components for the python-saharaclient package.
 %package python
 Summary: python components for the python-saharaclient package.
 Group: Default
-Requires: keystoneauth1-python
-Requires: oslo.log-python
-Requires: prettytable
-Requires: python-keystoneclient-python
-Requires: python-openstackclient-python
-Requires: requests-python
-Requires: six-python
 
 %description python
 python components for the python-saharaclient package.
@@ -84,7 +90,7 @@ python components for the python-saharaclient package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1484569310
+export SOURCE_DATE_EPOCH=1487899727
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -94,7 +100,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1484569310
+export SOURCE_DATE_EPOCH=1487899727
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
