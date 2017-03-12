@@ -6,7 +6,7 @@
 #
 Name     : python-saharaclient
 Version  : 0.18.0
-Release  : 35
+Release  : 36
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.18.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.18.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-0.18.0.tar.gz.asc
@@ -27,43 +27,12 @@ Requires: python-keystoneclient
 Requires: python-openstackclient
 Requires: requests
 Requires: six
-BuildRequires : PyYAML
-BuildRequires : appdirs-python
-BuildRequires : cliff-python
-BuildRequires : cmd2-python
-BuildRequires : jsonpatch-python
-BuildRequires : jsonpointer-python
-BuildRequires : jsonschema-python
-BuildRequires : keystoneauth1-python
-BuildRequires : msgpack-python-python
-BuildRequires : openstacksdk-python
-BuildRequires : os-client-config-python
-BuildRequires : osc-lib
-BuildRequires : oslo.log-python
+BuildRequires : configparser-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : prettytable
-BuildRequires : py-python
-BuildRequires : pyinotify-python
-BuildRequires : pyparsing-python
-BuildRequires : pytest
-BuildRequires : python-cinderclient-python
 BuildRequires : python-dev
-BuildRequires : python-glanceclient-python
-BuildRequires : python-keystoneclient-python
-BuildRequires : python-mock-python
-BuildRequires : python-novaclient-python
-BuildRequires : python-openstackclient-python
 BuildRequires : python3-dev
-BuildRequires : requests-python
-BuildRequires : requestsexceptions-python
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : testrepository-python
-BuildRequires : tox
-BuildRequires : virtualenv
 
 %description
 Python bindings to the OpenStack Sahara API
@@ -90,17 +59,12 @@ python components for the python-saharaclient package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487899727
+export SOURCE_DATE_EPOCH=1489334681
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1487899727
+export SOURCE_DATE_EPOCH=1489334681
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
