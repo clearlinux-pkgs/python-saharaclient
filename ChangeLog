@@ -1,6 +1,46 @@
 CHANGES
 =======
 
+1.1.0
+-----
+
+* Updated from global requirements
+* [trivial] Fix spelling
+* Updated from global requirements
+* Enable coverage report in console output
+* Add Constraints support
+* Replace logging with oslo_log
+* Updated from global requirements
+* Updated from global requirements
+* Show team and repo badges on README
+* Updated from global requirements
+
+1.0.0
+-----
+
+* Updated from global requirements
+* Updated from global requirements
+* Provide the cluster info about WebUI
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Add plug-in summary for osc doc
+* Enable release notes translation
+* Optimize command job-binary-download
+* Raise exception in command "plugin configs get"
+* remove old cli commands
+* Return error_code in command "job binary download"
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Add newline to strings in stdout/stderr.write()
+* Updated from global requirements
+* Updated from global requirements
+* standardize release note page ordering
+* Update reno for stable/newton
+* Fix doc build if git is absent
+
 0.18.0
 ------
 
