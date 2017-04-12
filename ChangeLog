@@ -1,6 +1,24 @@
 CHANGES
 =======
 
+1.2.0
+-----
+
+* Updated from global requirements
+* Replace six.iteritems() with .items()
+* Updated from global requirements
+* Fix a bug in jobs.py
+* PYthon 3.5 is added
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Updated from global requirements
+* Spelling replaced from "ot" to "of"
+* Fixed log messages
+* Updated from global requirements
+* Updated from global requirements
+* Set client module __version__
+* Update reno for stable/ocata
+
 1.1.0
 -----
 
