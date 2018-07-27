@@ -1,6 +1,29 @@
 CHANGES
 =======
 
+2.0.0
+-----
+
+* Clean S3 data source create/update
+* Support of S3 data sources in OSC
+* Adding boot from volume to osc
+* Adding boot from volume
+* Correct a missed job\_execution->job
+* Fix the cover tox target (switch to stestr)
+* Revert "Fix the cover tox target (switch to stestr)"
+* Allow S3 credentials in data source create
+* Rework saharaclient authentication
+* Reflect response fixes for jobs/jobs templates
+* Fix the cover tox target (switch to stestr)
+* Switch to using stestr
+* Add release note link in README
+* Reflect change to multiple clusters creation
+* Support of the improved force-delete in client
+* Remove PyPI downloads
+* fix tox python3 overrides
+* Fix build with Sphinx 1.7.x
+* Trivial: Update pypi url to new url
+
 1.6.0
 -----
 

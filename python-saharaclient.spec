@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xC36CDCB4DF00C68C (infra-root@openstack.org)
 #
 Name     : python-saharaclient
-Version  : 1.6.0
-Release  : 40
-URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-1.6.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-1.6.0.tar.gz
-Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-1.6.0.tar.gz.asc
+Version  : 2.0.0
+Release  : 41
+URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.0.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.0.0.tar.gz
+Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.0.0.tar.gz.asc
 Summary  : Client library for Sahara API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -67,14 +67,14 @@ python3 components for the python-saharaclient package.
 
 
 %prep
-%setup -q -n python-saharaclient-1.6.0
+%setup -q -n python-saharaclient-2.0.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532381751
+export SOURCE_DATE_EPOCH=1532694425
 python3 setup.py build -b py3
 
 %install
