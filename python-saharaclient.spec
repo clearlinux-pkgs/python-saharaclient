@@ -6,16 +6,16 @@
 #
 Name     : python-saharaclient
 Version  : 2.0.0
-Release  : 41
+Release  : 42
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.0.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.0.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.0.0.tar.gz.asc
 Summary  : Client library for Sahara API
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: python-saharaclient-python3
-Requires: python-saharaclient-license
-Requires: python-saharaclient-python
+Requires: python-saharaclient-license = %{version}-%{release}
+Requires: python-saharaclient-python = %{version}-%{release}
+Requires: python-saharaclient-python3 = %{version}-%{release}
 Requires: Babel
 Requires: Sphinx
 Requires: keystoneauth1
@@ -32,9 +32,6 @@ Requires: requests
 Requires: six
 BuildRequires : buildreq-distutils3
 BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 Team and repository tags
@@ -51,7 +48,7 @@ license components for the python-saharaclient package.
 %package python
 Summary: python components for the python-saharaclient package.
 Group: Default
-Requires: python-saharaclient-python3
+Requires: python-saharaclient-python3 = %{version}-%{release}
 
 %description python
 python components for the python-saharaclient package.
@@ -74,14 +71,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532694425
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1541272925
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/python-saharaclient
-cp LICENSE %{buildroot}/usr/share/doc/python-saharaclient/LICENSE
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/python-saharaclient
+cp LICENSE %{buildroot}/usr/share/package-licenses/python-saharaclient/LICENSE
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -90,8 +87,8 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/python-saharaclient/LICENSE
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/python-saharaclient/LICENSE
 
 %files python
 %defattr(-,root,root,-)
