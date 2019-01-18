@@ -1,6 +1,19 @@
 CHANGES
 =======
 
+2.1.0
+-----
+
+* Preparing OSC for APIv2
+* Add Python 3.6 classifier to setup.cfg
+* add python 3.6 unit test job
+* Update devel info: mailing list
+* Use templates for cover and lower-constraints
+* add python 3.6 unit test job
+* switch documentation job to new PTI
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+
 2.0.0
 -----
 
