@@ -6,7 +6,7 @@
 #
 Name     : python-saharaclient
 Version  : 2.1.0
-Release  : 43
+Release  : 44
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.1.0.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.1.0.tar.gz
 Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.1.0.tar.gz.asc
@@ -17,9 +17,7 @@ Requires: python-saharaclient-license = %{version}-%{release}
 Requires: python-saharaclient-python = %{version}-%{release}
 Requires: python-saharaclient-python3 = %{version}-%{release}
 Requires: Babel
-Requires: Sphinx
 Requires: keystoneauth1
-Requires: openstackdocstheme
 Requires: osc-lib
 Requires: oslo.i18n
 Requires: oslo.log
@@ -27,7 +25,6 @@ Requires: oslo.serialization
 Requires: oslo.utils
 Requires: pbr
 Requires: python-openstackclient
-Requires: reno
 Requires: requests
 Requires: six
 BuildRequires : buildreq-distutils3
@@ -74,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547837510
+export SOURCE_DATE_EPOCH=1551035857
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
