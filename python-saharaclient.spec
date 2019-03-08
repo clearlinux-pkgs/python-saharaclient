@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : python-saharaclient
-Version  : 2.1.0
-Release  : 44
-URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.1.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.1.0.tar.gz
-Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.1.0.tar.gz.asc
+Version  : 2.2.0
+Release  : 45
+URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.0.tar.gz
+Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.0.tar.gz.asc
 Summary  : Python client library for Sahara
 Group    : Development/Tools
 License  : Apache-2.0
@@ -64,18 +64,20 @@ python3 components for the python-saharaclient package.
 
 
 %prep
-%setup -q -n python-saharaclient-2.1.0
+%setup -q -n python-saharaclient-2.2.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551035857
+export SOURCE_DATE_EPOCH=1552070634
+export LDFLAGS="${LDFLAGS} -fno-lto"
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/python-saharaclient
 cp LICENSE %{buildroot}/usr/share/package-licenses/python-saharaclient/LICENSE

@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+2.2.0
+-----
+
+* Add missing APIv2 features to client, OSC
+
 2.1.0
 -----
 
