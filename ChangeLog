@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+2.2.1
+-----
+
+* Py3: fix the OSC download job binary command
+* OpenDev Migration Patch
+* Update UPPER\_CONSTRAINTS\_FILE for stable/stein
+* Update UPPER\_CONSTRAINTS\_FILE for stable/stein
+* Update .gitreview for stable/stein
+
 2.2.0
 -----
 
