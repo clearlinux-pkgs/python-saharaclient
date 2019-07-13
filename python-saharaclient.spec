@@ -6,7 +6,7 @@
 #
 Name     : python-saharaclient
 Version  : 2.2.1
-Release  : 47
+Release  : 48
 URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.1.tar.gz
 Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.1.tar.gz
 Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.1.tar.gz.asc
