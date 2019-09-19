@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xFC43F0EE211DFED8 (infra-root@openstack.org)
 #
 Name     : python-saharaclient
-Version  : 2.2.1
-Release  : 48
-URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.1.tar.gz
-Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.1.tar.gz
-Source99 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.2.1.tar.gz.asc
+Version  : 2.3.0
+Release  : 49
+URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.3.0.tar.gz
+Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.3.0.tar.gz
+Source1 : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-2.3.0.tar.gz.asc
 Summary  : Python client library for Sahara
 Group    : Development/Tools
 License  : Apache-2.0
@@ -74,14 +74,15 @@ python3 components for the python-saharaclient package.
 
 
 %prep
-%setup -q -n python-saharaclient-2.2.1
+%setup -q -n python-saharaclient-2.3.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1561733060
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1568907864
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

@@ -1,14 +1,16 @@
 CHANGES
 =======
 
-2.2.1
+2.3.0
 -----
 
+* py3: use the train test template and other updates
+* Update sphinx from current requirements
 * Py3: fix the OSC download job binary command
+* Replace git.openstack.org URLs with opendev.org URLs
 * OpenDev Migration Patch
-* Update UPPER\_CONSTRAINTS\_FILE for stable/stein
-* Update UPPER\_CONSTRAINTS\_FILE for stable/stein
-* Update .gitreview for stable/stein
+* Update master for stable/stein
+* Add py37 and API v2 jobs (scenario, tempest)
 
 2.2.0
 -----
