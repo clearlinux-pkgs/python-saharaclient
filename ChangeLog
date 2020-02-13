@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+3.0.0
+-----
+
+* fix: typo in tox minversion option
+* [ussuri][goal] Drop python 2.7 support and testing
+* Switch to Ussuri jobs
+* Update master for stable/train
+
 2.3.0
 -----
 
