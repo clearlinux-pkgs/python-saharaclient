@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+3.1.0
+-----
+
+* Cleanup py27 support
+* Update hacking for Python3
+* Fix the "image register" command (OSC 5.2.0 regression)
+
 3.0.0
 -----
 
