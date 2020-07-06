@@ -1,6 +1,19 @@
 CHANGES
 =======
 
+3.2.0
+-----
+
+* Switch to newer openstackdocstheme and reno versions
+* Fix hacking min version to 3.0.1
+* Bump default tox env from py37 to py38
+* Add py38 package metadata
+* Ussuri contributor docs community goal
+* Use unittest.mock instead of third party mock
+* Remove pypy job
+* Add Python3 victoria unit tests
+* Update master for stable/ussuri
+
 3.1.0
 -----
 
