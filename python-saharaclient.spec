@@ -5,18 +5,17 @@
 # Source0 file verified with key 0xC12B8E73B30F2FC8 (infra-root@openstack.org)
 #
 Name     : python-saharaclient
-Version  : 3.2.0
-Release  : 56
-URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-3.2.0.tar.gz
-Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-3.2.0.tar.gz
-Source1  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-3.2.0.tar.gz.asc
+Version  : 3.2.1
+Release  : 57
+URL      : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-3.2.1.tar.gz
+Source0  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-3.2.1.tar.gz
+Source1  : http://tarballs.openstack.org/python-saharaclient/python-saharaclient-3.2.1.tar.gz.asc
 Summary  : Client library for Sahara API
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: python-saharaclient-license = %{version}-%{release}
 Requires: python-saharaclient-python = %{version}-%{release}
 Requires: python-saharaclient-python3 = %{version}-%{release}
-Requires: Babel
 Requires: keystoneauth1
 Requires: osc-lib
 Requires: oslo.i18n
@@ -27,7 +26,6 @@ Requires: pbr
 Requires: python-openstackclient
 Requires: requests
 Requires: six
-BuildRequires : Babel
 BuildRequires : buildreq-distutils3
 BuildRequires : keystoneauth1
 BuildRequires : osc-lib
@@ -66,7 +64,6 @@ Summary: python3 components for the python-saharaclient package.
 Group: Default
 Requires: python3-core
 Provides: pypi(python_saharaclient)
-Requires: pypi(babel)
 Requires: pypi(keystoneauth1)
 Requires: pypi(osc_lib)
 Requires: pypi(oslo.i18n)
@@ -83,15 +80,15 @@ python3 components for the python-saharaclient package.
 
 
 %prep
-%setup -q -n python-saharaclient-3.2.0
-cd %{_builddir}/python-saharaclient-3.2.0
+%setup -q -n python-saharaclient-3.2.1
+cd %{_builddir}/python-saharaclient-3.2.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1594050481
+export SOURCE_DATE_EPOCH=1600111432
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,7 +104,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/python-saharaclient
-cp %{_builddir}/python-saharaclient-3.2.0/LICENSE %{buildroot}/usr/share/package-licenses/python-saharaclient/294b43b2cec9919063be1a3b49e8722648424779
+cp %{_builddir}/python-saharaclient-3.2.1/LICENSE %{buildroot}/usr/share/package-licenses/python-saharaclient/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+3.2.1
+-----
+
+* [goal] Migrating testing to Ubuntu Focal
+* Remove Babel requirement
+* drop mock from lower-constraints
+
 3.2.0
 -----
 
